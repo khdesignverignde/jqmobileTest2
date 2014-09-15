@@ -24,9 +24,14 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        document.getElementById('outputWindowButton').addEventListener('click', this.outputWindow, false);
         document.getElementById('deviceInfoButton').addEventListener('click', this.plugins.deviceInfo, false);
         document.getElementById('vibrateButton').addEventListener('click', this.plugins.vibrate, false);
         document.getElementById('showNetworkInfoButton').addEventListener('click', this.plugins.showNetworkInfo, false);
+        
+        document.getElementById('saveToLocalStorageButton').addEventListener('click', this.filetest.saveToLocalStorage, false);
+        document.getElementById('loadFromLocalStorageButton').addEventListener('click', this.filetest.loadFromLocalStorage, false);
+        
     },
     // deviceready Event Handler
     //
@@ -46,6 +51,10 @@ var app = {
 
         console.log('Received Event: ' + id);
     },
+    outputWindow: function(){
+            console.log(window);
+            app.output.showObject(window);
+    },
     plugins:{
         deviceInfo: function(){
             console.log(device);
@@ -60,6 +69,20 @@ var app = {
             console.log(navigator.network);
             app.output.showObject(navigator.network);
             app.output.showObject(navigator.network.connection);
+        }
+    },
+    filtest:{
+        saveToLocalStorage: function(){
+            var textArea = document.getElementById('saveToLocalStorageTextarea');
+            
+            localStorage.setItem('storedByFileTest', textArea.value);
+            textArea.value = '';
+            
+        },
+        loadFromLocalStorage: function(){
+            var textArea = document.getElementById('saveToLocalStorageTextarea');
+            
+            textArea.value = localStorage.getItem('storedByFileTest');
         }
     }
 };

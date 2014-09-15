@@ -59,8 +59,11 @@
                 <h2>nav</h2>
                 <a href="page.html" data-role="button" data-icon="star">to page.html</a>
                 <a href="#subpage1" data-role="button" data-icon="star">to #subpage1</a>
+                <a href="#filetest" data-role="button" data-icon="star">to #filetest</a>
                 
                 
+                <h2>outputWindow</h2>
+                <a href="#" data-role="button" data-icon="star" id="outputWindowButton">outputWindow</a> 
                 <h2>cordova plugins</h2>
                 <a href="#" data-role="button" data-icon="star" id="deviceInfoButton">deviceInfo</a> 
                 <a href="#" data-role="button" data-icon="star" id="vibrateButton">vibrate</a> 
@@ -79,14 +82,26 @@
         </div><!-- /page -->
         
         <div data-role="page" id="subpage1">
-            
                 <a href="#mainpage" data-role="button" data-icon="star">to #mainpage</a>
+        </div>
+        
+        <div data-role="page" id="filetest">
+            <div data-role="header">
+                <a href="#mainpage" data-role="button" data-icon="star">to #mainpage</a>
+            </div>
+            
+            <h2>localStorageTest</h2>
+            
+            <textarea rows="20" cols="40" id="saveToLocalStorageTextarea"></textarea>
+            <a href="#" id="saveToLocalStorageButton" data-role="button">saveToLocalStorage</a>
+            <a href="#" id="loadFromLocalStorageButton" data-role="button">loadFromLocalStorage</a>
             
             
         </div>
         
         
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="vibration.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
