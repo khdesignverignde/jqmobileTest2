@@ -77,14 +77,12 @@ var app = {
             
             window.localStorage.setItem('storedByFileTest', textArea.value);
             
-            window.localStorage.setItem('storedByFileTest123', 'textArea.value');
         },
         loadFromLocalStorage: function(){
             var textArea = document.getElementById('saveToLocalStorageTextarea');
             
             textArea.value = localStorage.getItem('storedByFileTest');
             
-            alert(window.localStorage.getItem('storedByFileTest123')); 
         }
     }
 };
