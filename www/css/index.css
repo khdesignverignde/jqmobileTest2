@@ -95,6 +95,10 @@ body {
 
 /* jQuery Mobile Styles */
 
+h2{
+    color:blue;
+}
+
 div[data-role="header"],
 div[data-role="footer"]{
     padding: 10px;

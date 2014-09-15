@@ -25,7 +25,8 @@
     <body>
         <div data-role="page" id="mainpage">
 
-            <div data-role="header">
+        
+            <div data-role="header" data-position="fixed">
                 <a href="index.html" data-icon="delete">Cancel</a>
                 <h1>PhoneGap index.html</h1>
             </div><!-- /header -->
@@ -64,10 +65,12 @@
                 
                 <h2>outputWindow</h2>
                 <a href="#" data-role="button" data-icon="star" id="outputWindowButton">outputWindow</a> 
+                
                 <h2>cordova plugins</h2>
                 <a href="#" data-role="button" data-icon="star" id="deviceInfoButton">deviceInfo</a> 
                 <a href="#" data-role="button" data-icon="star" id="vibrateButton">vibrate</a> 
                 <a href="#" data-role="button" data-icon="star" id="showNetworkInfoButton">showNetworkInfo</a> 
+                <a href="#" data-role="button" data-icon="star" id="scanBarcodeButton">scanBarcode</a> 
                 
                 
                 <h2>output</h2>
@@ -101,7 +104,7 @@
         
         
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="vibration.js"></script>
+        <script type="text/javascript" src="barcodescanner.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
             app.initialize();
