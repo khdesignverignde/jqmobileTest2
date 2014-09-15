@@ -28,6 +28,8 @@ var app = {
         document.getElementById('deviceInfoButton').addEventListener('click', this.plugins.deviceInfo, false);
         document.getElementById('vibrateButton').addEventListener('click', this.plugins.vibrate, false);
         document.getElementById('showNetworkInfoButton').addEventListener('click', this.plugins.showNetworkInfo, false);
+        
+        document.getElementById('ajaxTestButton').addEventListener('click', this.ajaxTest, false);
 
         document.getElementById('saveToLocalStorageButton').addEventListener('click', this.filetest.saveToLocalStorage, false);
         document.getElementById('loadFromLocalStorageButton').addEventListener('click', this.filetest.loadFromLocalStorage, false);
@@ -70,6 +72,12 @@ var app = {
             app.output.showObject(navigator.network);
             app.output.showObject(navigator.network.connection);
         }
+    },
+    ajaxTest: function(){
+        $.getJSON('js/testData.json', function(data){
+            console.log(data);
+            app.output.showObject(data);
+        });
     },
     filetest:{
         saveToLocalStorage: function(){

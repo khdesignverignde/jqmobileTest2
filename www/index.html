@@ -30,14 +30,32 @@
                 <a href="index.html" data-icon="delete">Cancel</a>
                 <h1>PhoneGap index.html</h1>
             </div><!-- /header -->
+            
+            
+            <h2>panel</h2>
+            <div data-role="panel" id="mypanel" data-display="overlay">
+                <a href="#mypanel" data-role="button" data-icon="star">toggle panel</a>
 
+                <h2>nav</h2>
+                
+                <ul data-role="listview" data-inset="true" data-filter="true">
+                    <li><a href="page.html" data-icon="arrow-r">to page.html</a></li>
+                    <li><a href="#subpage1" data-icon="arrow-r" data-transition="pop">to #subpage1</a></li>
+                    <li><a href="#filetest" data-icon="arrow-r">to #filetest</a></li>
+                </ul>
+            </div><!-- /panel -->
+
+            <a href="#mypanel" data-role="button" data-icon="star">toggle panel</a>
+
+            
             <div data-role="content">
                 <div id="deviceready" class="blink">
                     <p class="event listening">Connecting to Device</p>
                     <p class="event received">Device is Ready</p>
                 </div>
                 <div class="logo"></div>
-
+                
+                
                 <h2>Listview</h2>
                 <ul data-role="listview" data-inset="true" data-filter="true">
                     <li><a href="#">Acura</a></li>
@@ -52,14 +70,13 @@
 
                 <h2>Button</h2>
                 <a href="#" data-role="button" data-icon="star">Star button</a>
-
+                
                 <h2>Button with theme "a"</h2>
                 <a href="#" data-role="button" data-icon="star" data-theme="a">Button</a>
 
-
                 <h2>nav</h2>
                 <a href="page.html" data-role="button" data-icon="star">to page.html</a>
-                <a href="#subpage1" data-role="button" data-icon="star">to #subpage1</a>
+                <a href="#subpage1" data-role="button" data-icon="star" data-transition="pop">to #subpage1</a>
                 <a href="#filetest" data-role="button" data-icon="star">to #filetest</a>
                 
                 
@@ -71,6 +88,8 @@
                 <a href="#" data-role="button" data-icon="star" id="vibrateButton">vibrate</a> 
                 <a href="#" data-role="button" data-icon="star" id="showNetworkInfoButton">showNetworkInfo</a> 
                 
+                <h2>ajax test</h2>
+                <a href="#" data-role="button" data-icon="star" id="ajaxTestButton">ajaxTest</a> 
                 
                 <h2>output</h2>
                 <div id="output" style="height: 500px"></div>
